@@ -606,7 +606,7 @@ const common_target_usages = {
     "0xfff60005": { 'name': 'Analog 5', 'class': 'other' },
     "0xfff40002": { 'name': 'Trigger', 'class': 'other' },
     "0xfff40019": { 'name': 'Status LED', 'class': 'other' },
-    "0xfffa0000": { 'name': 'Autorize', 'class': 'other' },
+    "0xfffa0000": { 'name': 'Authorize', 'class': 'other' },
 }
 
 Object.assign(usages[0], common_target_usages);
