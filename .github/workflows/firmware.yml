@@ -43,9 +43,9 @@ jobs:
         working-directory: ./firmware
       - uses: actions/upload-artifact@v4
         with:
-          name: firmware
+          name: firmware-twibby_rp2040
           path: |
-            artifacts/twibby_rp2040.u2f
+            firmware/artifacts/twibby_rp2040.u2f
           if-no-files-found: error
 
       - name: Publish
