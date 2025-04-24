@@ -1,0 +1,32 @@
+// -----------------------------------------------------
+// NOTE: THIS HEADER IS ALSO INCLUDED BY ASSEMBLER SO
+//       SHOULD ONLY CONSIST OF PREPROCESSOR DIRECTIVES
+// -----------------------------------------------------
+
+#ifndef _BOARDS_TWIBBY_RP2040_H
+#define _BOARDS_TWIBBY_RP2040_H
+
+#define TWIBBY_RP2040_BOARD
+
+// Allow GPIO 2 and 25
+#define GPIO_VALID_PINS_BASE 0b00000010000000000000000000000100
+
+#define PICO_DEFAULT_PIO_USB_DP_PIN 26
+
+// --- FLASH ---
+
+#define PICO_BOOT_STAGE2_CHOOSE_W25Q080 1
+
+#ifndef PICO_FLASH_SPI_CLKDIV
+#define PICO_FLASH_SPI_CLKDIV 2
+#endif
+
+#ifndef PICO_FLASH_SIZE_BYTES
+#define PICO_FLASH_SIZE_BYTES (1 * 1024 * 1024)
+#endif
+
+#ifndef PICO_RP2040_B0_SUPPORTED
+#define PICO_RP2040_B0_SUPPORTED 1
+#endif
+
+#endif

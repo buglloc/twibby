@@ -1,0 +1,57 @@
+name: firmare
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - '*'
+    paths:
+      - 'firmware/**'
+      - '.github/workflows/firmware.yml'
+  pull_request:
+    paths:
+      - 'firmware/**'
+      - '.github/workflows/firmware.yml'
+  workflow_dispatch:
+defaults:
+  run:
+    shell: bash --noprofile --norc -x -e -o pipefail {0}
+jobs:
+  build:
+    name: Build
+    permissions:
+      contents: read
+      pull-requests: read
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Install compiler, libraries and tools
+        run: |
+          sudo apt update
+          sudo apt install -y --no-install-recommends gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib srecord
+      - name: Build
+        run: |
+          mkdir artifacts
+          mkdir build
+          cd build
+          PICO_BOARD=twibby_rp2040 cmake ..
+          make
+          cd ..
+          mv build/remapper.uf2 artifacts/twibby_rp2040.u2f
+        working-directory: ./firmware
+      - uses: actions/upload-artifact@v4
+        with:
+          name: firmware-twibby_rp2040
+          path: |
+            firmware/artifacts/twibby_rp2040.u2f
+          if-no-files-found: error
+
+      - name: Publish
+        if: "startsWith(github.ref, 'refs/tags/')"
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: "${{ secrets.PUBLISH_TOKEN }}"
+          prerelease: true
+          file: artifacts/twibby_rp2040.u2f
