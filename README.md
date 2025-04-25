@@ -24,7 +24,6 @@ YubiKey operations often require a physical touch for **user presence verificati
 - ✅ Built on RP2040 for ultra-low latency and high reliability
 - ✅ Optional YubiKey touch trigger support
 - ✅ Secure configuration: interface only exposed when required
-- ✅ Dual functionality: works as a HID remapper or USB sniffer
 
 ---
 
@@ -44,6 +43,7 @@ Custom-designed PCB with:
 - Raspberry Pi Pico RP2040-Core-A Microcontroller with onboard LED indicators
 - USB host and device ports
 - Touch simulation pad
+- Designed to be a USB sniffer or HID remapper (R1 and R2 need to be removed for remapper)
 
 Schematic, PCB, etc: [OSHWLab](https://oshwlab.com/buglloc/twibby)
 

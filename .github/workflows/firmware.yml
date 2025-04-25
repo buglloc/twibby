@@ -54,4 +54,4 @@ jobs:
         with:
           repo_token: "${{ secrets.PUBLISH_TOKEN }}"
           prerelease: true
-          file: artifacts/twibby_rp2040.u2f
+          file: firmware/artifacts/twibby_rp2040.u2f
