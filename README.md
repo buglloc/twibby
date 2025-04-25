@@ -4,7 +4,7 @@
 
 ## Overview
 
-Twibby is a customized **HID Remapper** device, built on the excellent open-source [Remapper](https://www.remapper.org/) project, with extended capabilities to interact with **YubiKeys**. It runs on an RP2040 microcontroller and includes a custom PCB designed to:
+Twibby is a customized **HID Remapper** device, built on the [excellent open-source project](https://www.remapper.org/), with extended capabilities to interact with **YubiKeys**. It runs on an RP2040 microcontroller and includes a custom PCB designed to:
   - Remap USB HID input (keyboards, mice, gamepads) in real-time
   - Intercept and transform input using layers, macros, and tap/hold modifiers
   - **Simulate a “touch” on a YubiKey**, enabling automatic FIDO2 or PIV functions requiring touch
