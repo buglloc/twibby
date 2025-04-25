@@ -36,6 +36,14 @@ YubiKey operations often require a physical touch for **user presence verificati
 
 ---
 
+## Configuration
+
+Like original HID remapper it is configurable [through a web browser](https://twbcfg.buglloc.com/) using WebHID (Chrome or Chrome-based browser required). Sample configuration:
+
+![](./imgs/cfg_example.png)
+
+---
+
 ## Hardware
 
 Custom-designed PCB with:
@@ -46,14 +54,6 @@ Custom-designed PCB with:
 - Designed to be a USB sniffer or HID remapper (R1 and R2 need to be removed for remapper)
 
 Schematic, PCB, etc: [OSHWLab](https://oshwlab.com/buglloc/twibby)
-
----
-
-## Configuration
-
-Like original HID remapper it is configurable [through a web browser](https://twbcfg.buglloc.com/) using WebHID (Chrome or Chrome-based browser required). Sample configuration:
-
-![](./imgs/cfg_example.png)
 
 ---
 
