@@ -11,13 +11,13 @@ Twibby is a customized **HID Remapper** device, built on the excellent open-sour
 
 ---
 
-## 🔐 YubiKey Touch Integration
+## YubiKey Touch Integration
 
 YubiKey operations often require a physical touch for **user presence verification**. This device integrates a transistor trigger that can simulate this touch under programmable conditions — by pressing a specific keyboard key.
 
 ---
 
-## ⚙️ Features
+## Features
 
 - ✅ Full-featured HID remapping: macros, layers, tap/hold behavior
 - ✅ USB HID proxy and pass-through support
@@ -27,7 +27,7 @@ YubiKey operations often require a physical touch for **user presence verificati
 
 ---
 
-## 🧩 Use Cases
+## Use Cases
 
 - Auto-confirm FIDO2 authentication when typing a specific password
 - Chain FIDO2/OTO/PIV + HID + touch confirmation from a single action
@@ -36,7 +36,7 @@ YubiKey operations often require a physical touch for **user presence verificati
 
 ---
 
-## 🛠️ Hardware
+## Hardware
 
 Custom-designed PCB with:
 - FE2.1 USB Hub controller
@@ -49,13 +49,21 @@ Schematic, PCB, etc: [OSHWLab](https://oshwlab.com/buglloc/twibby)
 
 ---
 
-## 📦 License
+## Configuration
+
+Like original HID remapper it is configurable [through a web browser](https://twbcfg.buglloc.com/) using WebHID (Chrome or Chrome-based browser required). Sample configuration:
+
+![](./imgs/cfg_example.png)
+
+---
+
+## License
 
 This project builds upon [Remapper](https://github.com/jfedor2/hid-remapper), licensed under MIT. All additions and hardware designs are also released under MIT unless noted otherwise.
 
 ---
 
-## 🙌 Acknowledgments
+## Acknowledgments
 
 - Huge thanks to [Jacek Fedorynski](https://github.com/jfedor2) for the original [HID Remapper](https://github.com/jfedor2/hid-remapper)
 - Inspired by real-world security workflows involving hardware tokens
