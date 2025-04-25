@@ -19,10 +19,12 @@ YubiKey operations often require a physical touch for **user presence verificati
 
 ## ⚙️ Features
 
-- ✅ Full HID Remapper functionality (macros, layers, tap/hold support)
-- ✅ USB HID proxy/pass-through mode
-- ✅ RP2040-based for low latency and high reliability
-- ✅ Conditional YubiKey touch triggering
+- ✅ Full-featured HID remapping: macros, layers, tap/hold behavior
+- ✅ USB HID proxy and pass-through support
+- ✅ Built on RP2040 for ultra-low latency and high reliability
+- ✅ Optional YubiKey touch trigger support
+- ✅ Secure configuration: interface only exposed when required
+- ✅ Dual functionality: works as a HID remapper or USB sniffer
 
 ---
 
