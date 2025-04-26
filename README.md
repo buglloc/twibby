@@ -1,6 +1,6 @@
 # Twibby
 
-![](./hardware/imgs/twibby.png)
+![](./imgs/cover.png)
 
 ## Overview
 
@@ -9,6 +9,7 @@ Twibby is a customized **HID Remapper** device, built on the [excellent open-sou
   - Intercept and transform input using layers, macros, and tap/hold modifiers
   - **Simulate a “touch” on a YubiKey**, enabling automatic FIDO2 or PIV functions requiring touch
 
+Post about (in Russian): https://ut.buglloc.com/2025/04/twibby/
 ---
 
 ## YubiKey Touch Integration
